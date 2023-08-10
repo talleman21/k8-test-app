@@ -19,4 +19,4 @@ spec:
         - name: k8-test-workflow
           image: acrworkflow1691684123049.azurecr.io/image-workflow-1691684123049:latest
           ports:
-            - containerPort: 5173
+            - containerPort: 80
