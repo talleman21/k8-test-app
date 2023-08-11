@@ -19,4 +19,4 @@ spec:
         - name: k8-test
           image: k8testregistry.azurecr.io/k8-test:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 80
