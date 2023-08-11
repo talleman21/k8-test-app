@@ -19,4 +19,4 @@ spec:
         - name: yarg
           image: acrworkflow1691714185967.azurecr.io/image-workflow-1691714185967:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 80
