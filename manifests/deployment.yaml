@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tester
+  name: k8-test
   labels:
-    app: tester
+    app: k8-test
   namespace: k8-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tester
+      app: k8-test
   template:
     metadata:
       labels:
-        app: tester
+        app: k8-test
     spec:
       containers:
-        - name: tester
-          image: k8testregistry.azurecr.io/k8-test-app:latest
+        - name: k8-test
+          image: k8testregistry.azurecr.io/k8-test:latest
           ports:
-            - containerPort: 80
+            - containerPort: 3000
