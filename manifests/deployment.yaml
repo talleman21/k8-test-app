@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8-test-workflow
+  name: tester
   labels:
-    app: k8-test-workflow
-  namespace: namespace-workflow-1691684123049
+    app: tester
+  namespace: k8-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: k8-test-workflow
+      app: tester
   template:
     metadata:
       labels:
-        app: k8-test-workflow
+        app: tester
     spec:
       containers:
-        - name: k8-test-workflow
-          image: acrworkflow1691684123049.azurecr.io/image-workflow-1691684123049:latest
+        - name: tester
+          image: k8testregistry.azurecr.io/k8-test-app:latest
           ports:
             - containerPort: 80
