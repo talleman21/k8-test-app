@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8-test
+  name: yarg
   labels:
-    app: k8-test
-  namespace: k8-test
+    app: yarg
+  namespace: yarg-ns
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: k8-test
+      app: yarg
   template:
     metadata:
       labels:
-        app: k8-test
+        app: yarg
     spec:
       containers:
-        - name: k8-test
-          image: k8testregistry.azurecr.io/k8-test:latest
+        - name: yarg
+          image: acrworkflow1691714185967.azurecr.io/image-workflow-1691714185967:latest
           ports:
-            - containerPort: 80
+            - containerPort: 3000
